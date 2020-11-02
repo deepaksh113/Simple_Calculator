@@ -10,10 +10,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import static java.lang.String.*;
 
 public class MainActivity extends AppCompatActivity {
-    double input1 = 0, input2 = 0;
+    private double input1 = 0, input2 = 0;
     private TextView editText;
     private boolean addition, subtract, multiplication, division, remainder, decimal;
-    Button button0, button1, button2, button3, button4, button5, button6, button7, button8, button9, buttonAddition, buttonSubtraction,
+    private Button button0, button1, button2, button3, button4, button5, button6, button7, button8, button9, buttonAddition, buttonSubtraction,
             buttonMultiplication, buttonDivision, buttonEqual, buttonDeletion, buttonDot, remainder1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
