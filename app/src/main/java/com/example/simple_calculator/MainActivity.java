@@ -4,39 +4,35 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import static java.lang.String.*;
 
 public class MainActivity extends AppCompatActivity {
     private double input1 = 0, input2 = 0;
     private TextView editText;
     private boolean addition, subtract, multiplication, division, remainder, decimal;
-    private Button button0, button1, button2, button3, button4, button5, button6, button7, button8, button9, buttonAddition, buttonSubtraction,
-            buttonMultiplication, buttonDivision, buttonEqual, buttonDeletion, buttonDot, remainder1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        button0 = (Button) findViewById(R.id.button0);
-        button1 = (Button) findViewById(R.id.button1);
-        button2 = (Button) findViewById(R.id.button2);
-        button3 = (Button) findViewById(R.id.button3);
-        button4 = (Button) findViewById(R.id.button4);
-        button5 = (Button) findViewById(R.id.button5);
-        button6 = (Button) findViewById(R.id.button6);
-        button7 = (Button) findViewById(R.id.button7);
-        button8 = (Button) findViewById(R.id.button8);
-        button9 = (Button) findViewById(R.id.button9);
-        buttonDot = (Button) findViewById(R.id.buttonDot);
-        buttonAddition = (Button) findViewById(R.id.buttonadditon);
-        buttonSubtraction = (Button) findViewById(R.id.buttonsubtraction);
-        buttonMultiplication = (Button) findViewById(R.id.buttonmultiplication);
-        buttonDivision = (Button) findViewById(R.id.buttondivison);
-        remainder1 = (Button) findViewById(R.id.Remainder);
-        buttonDeletion = (Button) findViewById(R.id.buttonDeletion);
-        buttonEqual = (Button) findViewById(R.id.buttonequal);
+        Button button0 = (Button) findViewById(R.id.button0);
+        Button button1 = (Button) findViewById(R.id.button1);
+        Button button2 = (Button) findViewById(R.id.button2);
+        Button button3 = (Button) findViewById(R.id.button3);
+        Button button4 = (Button) findViewById(R.id.button4);
+        Button button5 = (Button) findViewById(R.id.button5);
+        Button button6 = (Button) findViewById(R.id.button6);
+        Button button7 = (Button) findViewById(R.id.button7);
+        Button button8 = (Button) findViewById(R.id.button8);
+        Button button9 = (Button) findViewById(R.id.button9);
+        Button buttonDot = (Button) findViewById(R.id.buttonDot);
+        Button buttonAddition = (Button) findViewById(R.id.buttonadditon);
+        Button buttonSubtraction = (Button) findViewById(R.id.buttonsubtraction);
+        Button buttonMultiplication = (Button) findViewById(R.id.buttonmultiplication);
+        Button buttonDivision = (Button) findViewById(R.id.buttondivison);
+        Button remainder1 = (Button) findViewById(R.id.Remainder);
+        Button buttonDeletion = (Button) findViewById(R.id.buttonDeletion);
+        Button buttonEqual = (Button) findViewById(R.id.buttonequal);
 
         editText = (TextView) findViewById(R.id.display);
 
