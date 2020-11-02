@@ -125,7 +125,9 @@ public class MainActivity extends AppCompatActivity {
             }
 
             if (division) {
-                try{editText.setText(format("%s", input1 / input2));}catch (ArithmeticException e){Toast.makeText(getApplicationContext(),
+                try{editText.setText(format("%s", input1 / input2));}
+                catch (ArithmeticException e){
+                    Toast.makeText(getApplicationContext(),
                         "You have entered in it wrong pattern or you want to calculate infinity",
                         Toast.LENGTH_LONG)
                         .show();}
