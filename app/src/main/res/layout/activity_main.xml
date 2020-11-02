@@ -29,7 +29,7 @@ tools:context=".MainActivity">
     android:orientation="horizontal">
 
     <Button
-        android:id="@+id/buttonDel"
+        android:id="@+id/buttonDeletion"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_margin="1dp"
@@ -40,7 +40,7 @@ tools:context=".MainActivity">
         android:textSize="20sp" />
 
     <Button
-        android:id="@+id/buttoneql"
+        android:id="@+id/buttonequal"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_margin="1dp"
@@ -92,7 +92,7 @@ tools:context=".MainActivity">
         android:textSize="20sp" />
 
     <Button
-        android:id="@+id/buttondiv"
+        android:id="@+id/buttondivison"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_margin="1dp"
@@ -144,7 +144,7 @@ tools:context=".MainActivity">
         android:textSize="20sp" />
 
     <Button
-        android:id="@+id/buttonsub"
+        android:id="@+id/buttonsubtraction"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_margin="1dp"
@@ -196,7 +196,7 @@ tools:context=".MainActivity">
         android:textSize="20sp" />
 
     <Button
-        android:id="@+id/buttonmul"
+        android:id="@+id/buttonmultiplication"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_margin="1dp"
@@ -248,7 +248,7 @@ tools:context=".MainActivity">
         android:textSize="30sp" />
 
     <Button
-        android:id="@+id/buttonadd"
+        android:id="@+id/buttonadditon"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_margin="1dp"
