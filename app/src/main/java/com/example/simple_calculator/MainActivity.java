@@ -1,63 +1,51 @@
 package com.example.simple_calculator;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.simple_calculator.databinding.ActivityMainBinding;
+
 import static java.lang.String.*;
 
 public class MainActivity extends AppCompatActivity {
+    ActivityMainBinding activityMainBinding;
     private double input1 = 0, input2 = 0;
     private TextView editText;
     private boolean addition, subtract, multiplication, division, remainder, decimal;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Button button0 = (Button) findViewById(R.id.button0);
-        Button button1 = (Button) findViewById(R.id.button1);
-        Button button2 = (Button) findViewById(R.id.button2);
-        Button button3 = (Button) findViewById(R.id.button3);
-        Button button4 = (Button) findViewById(R.id.button4);
-        Button button5 = (Button) findViewById(R.id.button5);
-        Button button6 = (Button) findViewById(R.id.button6);
-        Button button7 = (Button) findViewById(R.id.button7);
-        Button button8 = (Button) findViewById(R.id.button8);
-        Button button9 = (Button) findViewById(R.id.button9);
-        Button buttonDot = (Button) findViewById(R.id.buttonDot);
-        Button buttonAddition = (Button) findViewById(R.id.buttonadditon);
-        Button buttonSubtraction = (Button) findViewById(R.id.buttonsubtraction);
-        Button buttonMultiplication = (Button) findViewById(R.id.buttonmultiplication);
-        Button buttonDivision = (Button) findViewById(R.id.buttondivison);
-        Button remainder1 = (Button) findViewById(R.id.Remainder);
-        Button buttonDeletion = (Button) findViewById(R.id.buttonDeletion);
-        Button buttonEqual = (Button) findViewById(R.id.buttonequal);
+        activityMainBinding = ActivityMainBinding.inflate(getLayoutInflater());
+        View view = activityMainBinding.getRoot();
+        setContentView(view);
+        editText = activityMainBinding.display;
 
-        editText = (TextView) findViewById(R.id.display);
+        activityMainBinding.button1.setOnClickListener(v -> editText.setText(format("%s1", editText.getText())));
 
-        button1.setOnClickListener(v -> editText.setText(format("%s1", editText.getText())));
+        activityMainBinding.button2.setOnClickListener(v -> editText.setText(format("%s2", editText.getText())));
 
-        button2.setOnClickListener(v -> editText.setText(format("%s2", editText.getText())));
+        activityMainBinding.button3.setOnClickListener(v -> editText.setText(format("%s3", editText.getText())));
 
-        button3.setOnClickListener(v -> editText.setText(format("%s3", editText.getText())));
+        activityMainBinding.button4.setOnClickListener(v -> editText.setText(format("%s4", editText.getText())));
 
-        button4.setOnClickListener(v -> editText.setText(format("%s4", editText.getText())));
+        activityMainBinding.button5.setOnClickListener(v -> editText.setText(format("%s5", editText.getText())));
 
-        button5.setOnClickListener(v -> editText.setText(format("%s5", editText.getText())));
+        activityMainBinding.button6.setOnClickListener(v -> editText.setText(format("%s6", editText.getText())));
 
-        button6.setOnClickListener(v -> editText.setText(format("%s6", editText.getText())));
+        activityMainBinding.button7.setOnClickListener(v -> editText.setText(format("%s7", editText.getText())));
 
-        button7.setOnClickListener(v -> editText.setText(format("%s7", editText.getText())));
+        activityMainBinding.button8.setOnClickListener(v -> editText.setText(format("%s8", editText.getText())));
 
-        button8.setOnClickListener(v -> editText.setText(format("%s8", editText.getText())));
+        activityMainBinding.button9.setOnClickListener(v -> editText.setText(format("%s9", editText.getText())));
 
-        button9.setOnClickListener(v -> editText.setText(format("%s9", editText.getText())));
+        activityMainBinding.button0.setOnClickListener(v -> editText.setText(format("%s0", editText.getText())));
 
-        button0.setOnClickListener(v -> editText.setText(format("%s0", editText.getText())));
-
-        buttonAddition.setOnClickListener(v -> {
+        activityMainBinding.buttonAdditon.setOnClickListener(v -> {
             if (editText.getText().length() != 0) {
                 input1 = Float.parseFloat(editText.getText() + "");
                 addition = true;
@@ -66,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        buttonSubtraction.setOnClickListener(v -> {
+        activityMainBinding.buttonSubtraction.setOnClickListener(v -> {
             if (editText.getText().length() != 0) {
                 input1 = Float.parseFloat(editText.getText() + "");
                 subtract = true;
@@ -75,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        buttonMultiplication.setOnClickListener(v -> {
+        activityMainBinding.buttonMultiplication.setOnClickListener(v -> {
             if (editText.getText().length() != 0) {
                 input1 = Float.parseFloat(editText.getText() + "");
                 multiplication = true;
@@ -84,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        buttonDivision.setOnClickListener(v -> {
+        activityMainBinding.buttonDivison.setOnClickListener(v -> {
             if (editText.getText().length() != 0) {
                 input1 = Float.parseFloat(format("%s", editText.getText()));
                 division = true;
@@ -93,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        remainder1.setOnClickListener(v -> {
+        activityMainBinding.remainder.setOnClickListener(v -> {
             if (editText.getText().length() != 0) {
                 input1 = Float.parseFloat(format("%s", editText.getText()));
                 remainder = true;
@@ -102,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        buttonEqual.setOnClickListener(v -> {
+        activityMainBinding.buttonEqual.setOnClickListener(v -> {
             if (addition || subtract || multiplication || division || remainder) {
                 input2 = Float.parseFloat(String.format("%s", editText.getText()));
             }
@@ -139,13 +127,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        buttonDeletion.setOnClickListener(v -> {
+        activityMainBinding.buttonDeletion.setOnClickListener(v -> {
             editText.setText("");
             input1 = 0.0;
             input2 = 0.0;
         });
 
-        buttonDot.setOnClickListener(v -> {
+        activityMainBinding.buttonDot.setOnClickListener(v -> {
             if (!decimal) {
                 editText.setText(format("%s.", editText.getText()));
                 decimal = true;
