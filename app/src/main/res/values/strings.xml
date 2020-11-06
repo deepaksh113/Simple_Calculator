@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Simple_Calculator</string>
+    <string name="history">History</string>
+    <string name="delete_history">Delete History</string>
 </resources>
