@@ -8,7 +8,7 @@ public class Data_Generator extends ViewModel {
     public double firstVariable = 0, secondVariable = 0, result = 0;
     private final String TAG= this.getClass().getSimpleName();
     @Override
-    protected void onCleared() {
+    public void onCleared() {
         super.onCleared();
         Log.i(TAG,"Data Deleted");
     }

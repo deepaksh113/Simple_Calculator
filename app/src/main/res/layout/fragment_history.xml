@@ -5,9 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
-    tools:context=".History">
+    tools:context=".Fragments.HistoryFragment">
+
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
@@ -15,10 +16,10 @@
             android:id="@+id/firstVariable"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="First Variable" />
+            android:text="@string/firstVariable" />
     </LinearLayout>
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="60dp"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
@@ -26,10 +27,10 @@
             android:id="@+id/operator"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Operator" />
+            android:text="@string/operator" />
     </LinearLayout>
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="110dp"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
@@ -37,10 +38,10 @@
             android:id="@+id/secondVariable"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Second Variable" />
+            android:text="@string/secondVariable" />
     </LinearLayout>
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="60dp"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
@@ -48,6 +49,15 @@
             android:id="@+id/result"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Result" />
+            android:text="@string/result" />
+
     </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/exit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/btn_dialog"
+        android:focusable="true" />
+
 </LinearLayout>

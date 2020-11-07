@@ -2,6 +2,4 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:title="@string/history"
         android:id="@+id/history"></item>
-    <item android:title="@string/delete_history"
-        android:id="@+id/deleteHistory"></item>
 </menu>

@@ -8,12 +8,10 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 import com.example.simple_calculator.Database.Data;
 import com.example.simple_calculator.R;
-import com.example.simple_calculator.databinding.ActivityHistoryBinding;
 
 import java.util.List;
 
 public class CustomAdapter extends BaseAdapter {
-    private ActivityHistoryBinding activityHistoryBinding;
     private List<Data> data;
     private Context context;
     private LayoutInflater layoutInflater;
@@ -39,7 +37,7 @@ public class CustomAdapter extends BaseAdapter {
     public View getView(int pos, View convertView, ViewGroup parent) {
         ViewHolder viewHolder=null;
         if (convertView== null){
-            convertView=layoutInflater.inflate(R.layout.activity_history,null);
+            convertView=layoutInflater.inflate(R.layout.fragment_history,null);
             viewHolder= new ViewHolder();
             viewHolder.firstVariable=(TextView) convertView.findViewById(R.id.firstVariable);
             viewHolder.operator=(TextView) convertView.findViewById(R.id.operator);
