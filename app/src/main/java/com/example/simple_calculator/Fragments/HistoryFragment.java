@@ -29,7 +29,7 @@ public class HistoryFragment extends Fragment implements DataCallBack {
     private ActivityMainBinding activityMainBinding;
 
     public HistoryFragment() {
-        // Required empty public constructor
+
     }
 
     public static HistoryFragment newInstance(int containerId) {
@@ -39,7 +39,6 @@ public class HistoryFragment extends Fragment implements DataCallBack {
         fragment.setArguments(args);
         return fragment;
     }
-
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
@@ -53,11 +52,9 @@ public class HistoryFragment extends Fragment implements DataCallBack {
         }
         dataManager=new DataManager(getContext());
     }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-//        try {
             fragmentHistoryBinding = FragmentHistoryBinding.inflate(inflater, container, false);
             dataManager.loadData(HistoryFragment.this);
             fragmentHistoryBinding.exit.setOnClickListener(new View.OnClickListener() {
@@ -69,18 +66,12 @@ public class HistoryFragment extends Fragment implements DataCallBack {
                     fragmentTransaction.replace(activityMainBinding.fragmentContainer.getId(), calculatorFragment,"BlankFragmentTag").addToBackStack(null).commit();
                 }
             });
-//        }
-//        catch (Exception e){
-//            Log.e(TAG,"onCreateView BlankFragment2",e);
-//        }
         return fragmentHistoryBinding.getRoot();
     }
-
     @Override
     public void dataError() {
 
     }
-
     @Override
     public void loadData(List<Data> dataList) {
         customAdapter= new CustomAdapter(context,dataList);
